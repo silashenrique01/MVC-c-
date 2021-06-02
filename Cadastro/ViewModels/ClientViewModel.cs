@@ -24,8 +24,15 @@ namespace Cadastro.ViewModels
         [Required(ErrorMessage = "O email é requerido.")]
         public string Email { get; set; }
 
+        [Display(Name = "Data Cadastro")]
+        public DateTime RegistrationDate { get; set; }
 
         [Display(Name = "Ativo")]
         public bool Ative { get; set; }
+
+        public ClientViewModel()
+        {
+            RegistrationDate = DateTime.Now;
+        }
     }
 }

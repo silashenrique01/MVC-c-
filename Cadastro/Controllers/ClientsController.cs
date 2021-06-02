@@ -47,6 +47,7 @@ namespace Cadastro.Controllers
                 
                 if (ModelState.IsValid)
                 {
+                    viewModel.RegistrationDate = DateTime.Now;
                     _clientViewModelService.Insert(viewModel);
 
                     return RedirectToAction(nameof(Index));
